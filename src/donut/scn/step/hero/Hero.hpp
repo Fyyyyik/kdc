@@ -89,6 +89,7 @@
 #include "scn/step/hero/StateCallback.hpp"
 #include "scn/step/hero/IState.hpp"
 #include "util/StateChanger.hpp"
+#include "util/ObjRefHandle.hpp"
 #include "types.h"
 
 using namespace hid;
@@ -203,7 +204,7 @@ namespace scn { namespace step { namespace hero {
         /* 0x2E8 */ mem::ExplicitScopedPtr<ChallengeBattleCtrl*> mChallengeBattleCtrl;
         /* 0x2F0 */ mem::ExplicitScopedPtr<StateCallback*> mStateCallback;
         /* 0x2F8 */ mem::ExplicitScopedPtr<util::StateChanger<IState*, 256> > mStateChanger;
-        STRUCT_FILL(0x314 - 0x300);
+        /* 0x300 */ util::ObjRefHandle<Hero>::Owner mOwner;
     };
 }}}
 // clang-format on
