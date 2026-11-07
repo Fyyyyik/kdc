@@ -1,26 +1,12 @@
 #ifndef DONUT_SCN_STEP_HERO_INDIVIUTIL_HPP
 #define DONUT_SCN_STEP_HERO_INDIVIUTIL_HPP
 
-#include <hel/math/Vector3.hpp>
-
 #include "scn/step/common/Param.hpp"
 #include "scn/step/hero/Hero.hpp"
+#include "scn/step/hero/NodeAttach.hpp"
 
 
 namespace scn { namespace step { namespace hero {
-
-class NodeAttach {
-public:
-    void setOffset(const hel::math::Vector3& rOffset);
-    void setRotate(const hel::math::Vector3& rRotate);
-    void setScale(float scale);
-};
-
-struct NodeAttachParam {
-    /* 0x00 */ hel::math::Vector3 mOffset;
-    /* 0x0C */ hel::math::Vector3 mRotate;
-    /* 0x18 */ float mScale;
-};
 
 class IndiviUtil {
 public:

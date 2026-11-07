@@ -116,5 +116,3 @@ void Invincible::requestMightyEffect()
 void Invincible::releaseMightyEffect()
 {
 }
-
-
