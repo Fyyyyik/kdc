@@ -8,8 +8,6 @@ using namespace scn::step::hero;
 #pragma dont_inline on
 Hang::Hang(Hero& rHero) 
     : mHero(&rHero)
-    , mParent(hel::common::PointerWrapper<Hang>())
-    , mChild(hel::common::PointerWrapper<Hang>())
     , mCanReceive(false)
     , mCanHang(false)
     , mIsHangNow(false)
