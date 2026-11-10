@@ -1,10 +1,9 @@
 #ifndef DONUT_SCN_STEP_HERO_HANG_HPP
 #define DONUT_SCN_STEP_HERO_HANG_HPP
 
-#include "hel/math/Vector3.hpp"
-#include "scn/step/common/Param.hpp"
+#include <hel/math/Vector3.hpp>
 #include "scn/step/hero/Hero.hpp"
-#include "hel/common/PointerWrapper.hpp"
+#include <hel/common/PointerWrapper.hpp>
 #include "types.h"
 
 // clang-format off
@@ -26,6 +25,9 @@ public:
     bool canHang() const;
     hel::math::Vector3 getRootPos() const;
     hel::math::Vector3 getConstraintOffsetParent() const;
+    hel::math::Vector3 getConstraintOffsetChild() const;
+    hel::math::Vector3 getConstraintPos() const;
+    bool isParentRightDir() const;
     // Merged into homebutton::gui::EventHandler::setManager(homebutton::gui::Manager*)
     void setParent(Hang& rParent);
     // Merged into mem::ExplicitScopedPtr<app::HIDErrorMenuImpl>::isConstruct() const

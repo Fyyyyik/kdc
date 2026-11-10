@@ -109,6 +109,8 @@ namespace scn { namespace step { namespace hero {
         scn::step::chara::Location *location() const;
         scn::step::vacuum::Attacker *vacuumAttacker();
         Piggyback *piggyback();
+        gobj::Target *target();
+        Model *model();
         // NOTE: Is merged into mcoll::detail::CollidedDetectionInfo::collideTargetIndex() const
         Kind kind() const;
         // Merged into scn::step::hero::Hero::stateChecker()

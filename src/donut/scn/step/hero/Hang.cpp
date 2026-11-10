@@ -104,16 +104,30 @@ bool Hang::canHang() const {
 hel::math::Vector3 Hang::getRootPos() const {
     if (mParent.isEmpty()) {
         return mHero->location()->pos();
-    }
-    else {
+    } else {
         return mParent.getRef().getRootPos();
     }
 }
 
-hel::math::Vector3 Hang::getConstraintOffsetParent() const {
-    if (isExistParent()) {
-        
+hel::math::Vector3 Hang::getConstraintPos() const {
+    hel::math::Vector3 pos = hel::math::Vector3();
+    if (mParent.isEmpty()) {
+        pos = mHero->location()->pos();
+    } else {
+        pos = mHero->location()->pos();
+        hel::math::Vector3 offsetChild = getConstraintOffsetChild();
+        hel::math::Vector3 offsetParent = mParent.getRef().getConstraintOffsetParent();
+        hel::math::Vector3 copyParent = hel::math::Vector3(offsetParent); // won't be a perfect match unless this is changed to use stw and lwz
+        copyParent += offsetChild;
+        hel::math::Vector3 savedPos = hel::math::Vector3(pos); // same here
+        savedPos.x *= mParent.getRef().mHero->target()->getSign();
+        pos += savedPos;
     }
+    return pos;
+}
+
+bool Hang::isParentRightDir() const {
+    return mParent.getRef().mHero->target()->isRightDir();
 }
 
 // All functions below are merged into others, see the header for more info.
