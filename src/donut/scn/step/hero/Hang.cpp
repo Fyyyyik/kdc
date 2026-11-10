@@ -13,17 +13,9 @@ Hang::Hang(Hero& rHero)
     , mIsHangNow(false)
     , mInterval(0)
 {}
-#pragma dont_inline off
+#pragma dont_inline reset
 
 Hang::~Hang() {}
-
-// Not 100% match because isExistParent is merged, see header for more details.
-void Hang::setChild(Hang &rChild) {
-    if (mChild.isEmpty() && rChild.isExistParent()) {
-        mChild.set(rChild);
-        rChild.setParent(*this);
-    }
-}
 
 #pragma dont_inline on
 // Not 100% because code merging again for these 2 functions ughhhhhh
@@ -82,6 +74,13 @@ void Hang::chkCollide(Hang &rOther) {
         ) {
             setChild(rOther);
         }
+    }
+}
+
+void Hang::setChild(Hang &rChild) {
+    if (!mChild.isEmpty() && !rChild.isExistParent()) {
+        mChild.set(rChild);
+        rChild.setParent(*this);
     }
 }
 
