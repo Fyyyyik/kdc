@@ -23,7 +23,7 @@ public:
         mPointer = nullptr;
     }
 
-    inline T& getRef() {
+    inline T& getRef() const {
         return *mPointer;
     }
 

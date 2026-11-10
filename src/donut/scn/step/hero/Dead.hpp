@@ -4,7 +4,11 @@
 // clang-format off
 namespace scn { namespace step { namespace hero {
 
-class Dead;
+class Dead {
+public:
+    // Merged into pause::ButtonPanel::isEnable() const
+    bool isDead() const;
+};
 
 }}}
 // clang-format on

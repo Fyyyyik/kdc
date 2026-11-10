@@ -4,7 +4,11 @@
 // clang-format off
 namespace scn { namespace step { namespace hero {
 
-class Water;
+class Water {
+public:
+    // Merged into pause::ButtonPanel::isEnable() const
+    bool isInWater() const;
+};
 
 }}}
 // clang-format on

@@ -4,7 +4,11 @@
 // clang-format off
 namespace scn { namespace step { namespace hero {
 
-class ObjStop;
+class ObjStop {
+public:
+    // Merged into scn::step::boss::ObjStop::isStopped() const
+    bool isStopped() const;
+};
 
 }}}
 // clang-format on

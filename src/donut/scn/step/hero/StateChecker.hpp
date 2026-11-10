@@ -4,7 +4,11 @@
 // clang-format off
 namespace scn { namespace step { namespace hero {
 
-class StateChecker;
+class StateChecker {
+public:
+    // Merged into scn::step::bg::ResPart::gridHeight() const
+    bool haveBomb() const;
+};
 
 }}}
 // clang-format on

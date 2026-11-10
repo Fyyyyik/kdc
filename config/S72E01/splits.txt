@@ -2796,6 +2796,10 @@ donut/scn/step/hero/Guard.cpp:
 	.text       start:0x803385F8 end:0x803386B4
 	.rodata     start:0x80419D00 end:0x80419D50
 
+donut/scn/step/hero/Hang.cpp:
+	.text       start:0x803386B4 end:0x80338CFC
+	.sdata2     start:0x80562BC8 end:0x80562BD8
+
 donut/scn/step/hero/IndiviUtil.cpp:
 	.text       start:0x803418A4 end:0x80341C74
 	.data       start:0x80484CD0 end:0x80484D28

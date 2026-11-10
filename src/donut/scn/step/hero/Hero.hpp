@@ -49,7 +49,6 @@
 #include "scn/step/chara/Shadow.hpp"
 #include "scn/step/hero/Water.hpp"
 #include "scn/step/hero/CaptureHeroReceiver.hpp"
-#include "scn/step/hero/Piggyback.hpp"
 #include "scn/step/hero/LogoutController.hpp"
 #include "scn/step/hero/Stepping.hpp"
 #include "scn/step/sfx/DarknessLight.hpp"
@@ -71,7 +70,6 @@
 #include "scn/step/hero/WearBack.hpp"
 #include "scn/step/hero/InertialMove.hpp"
 #include "scn/step/hero/Squash.hpp"
-#include "scn/step/hero/Hang.hpp"
 #include "scn/step/hero/VacuumReceiver.hpp"
 #include "scn/step/hero/RotCtrl.hpp"
 #include "scn/step/hero/ChargeFlash.hpp"
@@ -99,12 +97,26 @@ namespace scn { namespace step { namespace hero {
 
     class Invincible;
     class Guard;
+    class Hang;
+    class Piggyback;
 
     class Hero {
     public:
         Param* param() const;
+        Dead *dead();
+        Water *water();
+        ObjStop *objStop();
+        scn::step::chara::Location *location() const;
+        scn::step::vacuum::Attacker *vacuumAttacker();
+        Piggyback *piggyback();
         // NOTE: Is merged into mcoll::detail::CollidedDetectionInfo::collideTargetIndex() const
         Kind kind() const;
+        // Merged into scn::step::hero::Hero::stateChecker()
+        StateChecker *stateChecker() const;
+        // Merged into scn::step::hero::Hero::dead()
+        Dead *dead() const;
+        // Merged into scn::step::hero::Hero::vacuumAttacker()
+        scn::step::vacuum::Attacker *vacuumAttacker() const;
     private:
         /* 0x0 */ scn::step::Component* mComponent;
         /* 0x4 */ STRUCT_FILL(0x8); // todo: replace with a HeapExpArrayUser
