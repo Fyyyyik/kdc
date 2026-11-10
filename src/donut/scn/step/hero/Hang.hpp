@@ -32,6 +32,16 @@ public:
     void setParent(Hang& rParent);
     // Merged into mem::ExplicitScopedPtr<app::HIDErrorMenuImpl>::isConstruct() const
     bool isExistParent() const;
+    // Merged into mcoll::detail::DetectArg::setIsPassThroughLand(bool)
+    void setCanReceive(bool canReceive);
+    // Merged into mcoll::detail::DetectArg::setIsGenerateFloorToOneSpaceGrid(bool)
+    void setCanHang(bool canHang);
+    // Merged into mcoll::detail::DetectArg::setIsGenerateFloorToTwoSpaceGrid(bool)
+    void setIsHangNow(bool isHangNow);
+    // Merged into GXInitTexObjUserData
+    void setInterval(s32 interval);
+    // Merged into mcoll::detail::DetectArg::isPassThroughLand() const
+    bool canReceive() const;
 private:
     /* 0x0 */ Hero *mHero;
     /* 0x4 */ hel::common::PointerWrapper<Hang> mParent;

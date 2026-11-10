@@ -136,3 +136,23 @@ void Hang::setParent(Hang &rParent) {
 bool Hang::isExistParent() const {
     return !mParent.isEmpty();
 }
+
+void Hang::setCanReceive(bool canReceive) {
+    mCanReceive = canReceive;
+}
+
+void Hang::setCanHang(bool canHang) {
+    mCanHang = canHang;
+}
+
+void Hang::setIsHangNow(bool isHangNow) {
+    mIsHangNow = isHangNow;
+}
+
+void Hang::setInterval(s32 interval) {
+    mInterval = interval;
+}
+
+bool Hang::canReceive() const {
+    return mCanReceive;
+}
