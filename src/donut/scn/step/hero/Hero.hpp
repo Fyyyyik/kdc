@@ -53,7 +53,6 @@
 #include "scn/step/hero/Stepping.hpp"
 #include "scn/step/sfx/DarknessLight.hpp"
 #include "scn/step/hero/PowerCharge.hpp"
-#include "scn/step/hero/Kiss.hpp"
 #include "scn/step/hero/ShakeCharge.hpp"
 #include "scn/step/chara/Knockback.hpp"
 #include "scn/step/hero/DamageFieldReact.hpp"
@@ -99,6 +98,7 @@ namespace scn { namespace step { namespace hero {
     class Guard;
     class Hang;
     class Piggyback;
+    class Kiss;
 
     class Hero {
     public:
