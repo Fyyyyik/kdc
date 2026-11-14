@@ -80,7 +80,6 @@
 #include "scn/step/hero/ZNururi.hpp"
 #include "scn/step/hero/MapCollProducer.hpp"
 #include "scn/step/hero/RoofChecker.hpp"
-#include "scn/step/hero/MoveLimit.hpp"
 #include "scn/step/hero/Landing.hpp"
 #include "scn/step/hero/ChallengeBattleCtrl.hpp"
 #include "scn/step/hero/StateCallback.hpp"
@@ -99,6 +98,7 @@ namespace scn { namespace step { namespace hero {
     class Hang;
     class Piggyback;
     class Kiss;
+    class MoveLimit;
 
     class Hero {
     public:
@@ -119,6 +119,10 @@ namespace scn { namespace step { namespace hero {
         Dead *dead() const;
         // Merged into scn::step::hero::Hero::vacuumAttacker()
         scn::step::vacuum::Attacker *vacuumAttacker() const;
+        // Merged into GKI_getfirst
+        scn::step::Component *comp();
+        // Merged into GKI_getfirst
+        scn::step::Component *comp() const;
     private:
         /* 0x0 */ scn::step::Component* mComponent;
         /* 0x4 */ STRUCT_FILL(0x8); // todo: replace with a HeapExpArrayUser

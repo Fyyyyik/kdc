@@ -142,6 +142,7 @@ public:
     spstop::Manager* superStopManager();
     debug::GeneralDrawer* debugGeneralDrawer();
     debug::ObjInfoRepos* debugObjInfoRepos();
+    hero::Manager* heroManager();
 private:
     /* 0x00 */ ScopedPtr<Context> mContext;
     /* 0x04 */ ScopedPtr<map::DataFile> mDataFile;

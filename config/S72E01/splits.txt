@@ -2808,6 +2808,14 @@ donut/scn/step/hero/IndiviUtil.cpp:
 donut/scn/step/hero/Invincible.cpp:
 	.text       start:0x80342180 end:0x803429D0
 
+donut/scn/step/hero/MoveLimit.cpp:
+	.text       start:0x8034E5FC end:0x8034EA98
+	.sdata2     start:0x80562D38 end:0x80562D40
+
+donut/scn/step/hero/MoveLimitResponseCtrl.cpp:
+	.text       start:0x8034EA98 end:0x8034EAD8
+	.sdata2     start:0x80562D40 end:0x80562D48
+
 donut/scn/step/spstop/Manager.cpp:
 	.text       start:0x803D0B9C end:0x803D0E90
 

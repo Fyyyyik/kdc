@@ -1439,6 +1439,8 @@ config.libs = [
             Object(NonMatching, "donut/scn/step/hero/Hang.cpp"),
             Object(NonMatching, "donut/scn/step/hero/IndiviUtil.cpp", extra_cflags=["-O3"]),
             Object(NonMatching, "donut/scn/step/hero/Invincible.cpp"),
+            Object(NonMatching, "donut/scn/step/hero/MoveLimit.cpp"),
+            Object(Equivalent, "donut/scn/step/hero/MoveLimitResponseCtrl.cpp"),
         ],
     },
     {

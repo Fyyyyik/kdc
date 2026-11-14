@@ -1,7 +1,7 @@
 #ifndef HEL_GEO_RECT_HPP
 #define HEL_GEO_RECT_HPP
 
-#include <math/Vector2.hpp>
+#include <hel/math/Vector2.hpp>
 
 namespace hel { namespace geo {
 

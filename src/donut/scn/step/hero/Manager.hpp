@@ -1,12 +1,15 @@
 #ifndef DONUT_SCN_STEP_HERO_MANAGER_HPP
 #define DONUT_SCN_STEP_HERO_MANAGER_HPP
 
-#include "param/JITParam.hpp"
+#include "scn/step/hero/MoveLimitResponseCtrl.hpp"
 
 namespace scn { namespace step { namespace hero {
-    class Manager {
 
-    };
+class Manager {
+public:
+    MoveLimitResponseCtrl *moveLimitResponseCtrl();
+};
+
 }}}
 
 #endif
